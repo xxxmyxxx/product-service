@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
                         .build())
                 .httpStatus(HttpStatus.BAD_REQUEST)
                 .hasError(true)
-                .errorMessage(Collections.singletonList(exception.getMessage()))
+                .errorMessages(Collections.singletonList(exception.getMessage()))
                 .build();
     }
     @ResponseStatus(HttpStatus.NOT_FOUND)
@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
                         .build())
                 .httpStatus(HttpStatus.NOT_FOUND)
                 .hasError(true)
-                .errorMessage(Collections.singletonList(exception.getMessage()))
+                .errorMessages(Collections.singletonList(exception.getMessage()))
                 .build();
     }
 }
