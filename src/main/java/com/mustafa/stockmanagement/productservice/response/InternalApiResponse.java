@@ -12,7 +12,7 @@ public class InternalApiResponse<T> {
     private FriendlyMessage friendlyMessage;
     private T payload;
     private boolean hasError;
-    private List<String>errorMessage;
+    private List<String>errorMessages;
     private HttpStatus httpStatus;
 
 }

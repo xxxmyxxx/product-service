@@ -3,6 +3,7 @@ package com.mustafa.stockmanagement.productservice.service.impl;
 import com.mustafa.stockmanagement.productservice.enums.Language;
 import com.mustafa.stockmanagement.productservice.exception.enums.FriendlyMessageCodes;
 import com.mustafa.stockmanagement.productservice.exception.exceptions.ProductNotCreatedException;
+import com.mustafa.stockmanagement.productservice.exception.exceptions.ProductNotFoundException;
 import com.mustafa.stockmanagement.productservice.repository.ProductRepository;
 import com.mustafa.stockmanagement.productservice.repository.entity.Product;
 import com.mustafa.stockmanagement.productservice.request.ProductCreateRequest;
@@ -45,7 +46,7 @@ public class ProductRepositoryServiceImpl implements IProductRepositoryService {
         log.debug("[{}][getProduct] -> request productId: {}",this.getClass().getSimpleName(),productId);
         Product product =productRepository.getByProductIdAndDeletedFalse(productId);
         if(Objects.isNull(product)){
-            throw new ProductNotCreatedException(language,FriendlyMessageCodes.PRODUCT_NOT_FOUND_EXCEPTION,"Product not found for product id :"+ productId);
+            throw new ProductNotFoundException(language,FriendlyMessageCodes.PRODUCT_NOT_FOUND_EXCEPTION,"Product not found for product id : "+ productId);
         }
         log.debug("[{}][getProduct] -> response: {}",this.getClass().getSimpleName(),product);
         return product;
