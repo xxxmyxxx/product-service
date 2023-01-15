@@ -8,6 +8,14 @@ spring:
 info:
   component: Product Service
 
+
+server:
+  port: 9788
+logging:
+  level:
+    root: off
+    com.mustafa: DEBUG
+
 ---
 
 spring:

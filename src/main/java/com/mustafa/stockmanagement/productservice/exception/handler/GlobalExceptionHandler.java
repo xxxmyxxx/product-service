@@ -2,6 +2,7 @@ package com.mustafa.stockmanagement.productservice.exception.handler;
 
 import com.mustafa.stockmanagement.productservice.exception.enums.FriendlyMessageCodes;
 import com.mustafa.stockmanagement.productservice.exception.exceptions.ProductNotCreatedException;
+import com.mustafa.stockmanagement.productservice.exception.exceptions.ProductNotFoundException;
 import com.mustafa.stockmanagement.productservice.exception.utils.FriendlyMessageUtils;
 import com.mustafa.stockmanagement.productservice.response.FriendlyMessage;
 import com.mustafa.stockmanagement.productservice.response.InternalApiResponse;
@@ -26,6 +27,18 @@ public class GlobalExceptionHandler {
                 .hasError(true)
                 .errorMessage(Collections.singletonList(exception.getMessage()))
                 .build();
-
+    }
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(ProductNotFoundException.class)
+    public InternalApiResponse<String>handleProductNotFoundException(ProductNotFoundException exception){
+        return InternalApiResponse.<String>builder()
+                .friendlyMessage(FriendlyMessage.builder()
+                        .title(FriendlyMessageUtils.getFriendlyMessage(exception.getLanguage(),FriendlyMessageCodes.ERROR))
+                        .description(FriendlyMessageUtils.getFriendlyMessage(exception.getLanguage(),exception.getFriendlyMessageCode()))
+                        .build())
+                .httpStatus(HttpStatus.NOT_FOUND)
+                .hasError(true)
+                .errorMessage(Collections.singletonList(exception.getMessage()))
+                .build();
     }
 }

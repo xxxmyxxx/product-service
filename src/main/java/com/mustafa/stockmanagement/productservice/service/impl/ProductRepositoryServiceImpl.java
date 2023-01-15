@@ -13,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -40,7 +42,13 @@ public class ProductRepositoryServiceImpl implements IProductRepositoryService {
 
     @Override
     public Product getProduct(Language language, Long productId) {
-        return null;
+        log.debug("[{}][getProduct] -> request productId: {}",this.getClass().getSimpleName(),productId);
+        Product product =productRepository.getByProductIdAndDeletedFalse(productId);
+        if(Objects.isNull(product)){
+            throw new ProductNotCreatedException(language,FriendlyMessageCodes.PRODUCT_NOT_FOUND_EXCEPTION,"Product not found for product id :"+ productId);
+        }
+        log.debug("[{}][getProduct] -> response: {}",this.getClass().getSimpleName(),product);
+        return product;
     }
 
     @Override
