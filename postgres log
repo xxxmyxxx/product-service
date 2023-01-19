@@ -1,126 +1,64 @@
-2023-01-17 23:37:16 The files belonging to this database system will be owned by user "postgres".
-2023-01-17 23:37:16 This user must also own the server process.
-2023-01-17 23:37:16 
-2023-01-17 23:37:16 The database cluster will be initialized with locale "en_US.utf8".
-2023-01-17 23:37:16 The default database encoding has accordingly been set to "UTF8".
-2023-01-17 23:37:16 The default text search configuration will be set to "english".
-2023-01-17 23:37:16 
-2023-01-17 23:37:16 Data page checksums are disabled.
-2023-01-17 23:37:16 
-2023-01-17 23:37:16 fixing permissions on existing directory /var/lib/postgresql/data ... ok
-2023-01-17 23:37:16 creating subdirectories ... ok
-2023-01-17 23:37:16 selecting dynamic shared memory implementation ... posix
-2023-01-17 23:37:16 selecting default max_connections ... 100
-2023-01-17 23:37:16 selecting default shared_buffers ... 128MB
-2023-01-17 23:37:16 selecting default time zone ... UTC
-2023-01-17 23:37:16 creating configuration files ... ok
-2023-01-17 23:37:19 running bootstrap script ... ok
-2023-01-17 23:37:24 performing post-bootstrap initialization ... ok
-2023-01-17 23:37:27 syncing data to disk ... ok
-2023-01-17 23:37:27 
-2023-01-17 23:37:27 
-2023-01-17 23:37:27 Success. You can now start the database server using:
-2023-01-17 23:37:27 
-2023-01-17 23:37:27     pg_ctl -D /var/lib/postgresql/data -l logfile start
-2023-01-17 23:37:27 
-2023-01-17 23:37:27 waiting for server to start....2023-01-17 20:37:27.813 UTC [37] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
-2023-01-17 23:37:27 2023-01-17 20:37:27.815 UTC [37] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-01-17 23:37:27 2023-01-17 20:37:27.845 UTC [38] LOG:  database system was shut down at 2023-01-17 20:37:24 UTC
-2023-01-17 23:37:27 2023-01-17 20:37:27.875 UTC [37] LOG:  database system is ready to accept connections
-2023-01-17 23:37:27  done
-2023-01-17 23:37:27 server started
-2023-01-17 23:37:29 CREATE DATABASE
-2023-01-17 23:37:29 
-2023-01-17 23:37:29 
-2023-01-17 23:37:29 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-2023-01-17 23:37:29 
-2023-01-17 23:37:29 waiting for server to shut down...2023-01-17 20:37:29.985 UTC [37] LOG:  received fast shutdown request
-2023-01-17 23:37:29 .2023-01-17 20:37:29.989 UTC [37] LOG:  aborting any active transactions
-2023-01-17 23:37:29 2023-01-17 20:37:29.990 UTC [37] LOG:  background worker "logical replication launcher" (PID 44) exited with exit code 1
-2023-01-17 23:37:29 2023-01-17 20:37:29.990 UTC [39] LOG:  shutting down
-2023-01-17 23:37:30 2023-01-17 20:37:30.062 UTC [37] LOG:  database system is shut down
-2023-01-17 23:37:30  done
-2023-01-17 23:37:30 server stopped
-2023-01-17 23:37:30 
-2023-01-17 23:37:30 PostgreSQL init process complete; ready for start up.
-2023-01-17 23:37:30 
-2023-01-17 23:38:17 
-2023-01-17 23:38:17 PostgreSQL Database directory appears to contain a database; Skipping initialization
-2023-01-17 23:38:17 
-2023-01-17 23:52:52 
-2023-01-17 23:52:52 PostgreSQL Database directory appears to contain a database; Skipping initialization
-2023-01-17 23:52:52 
-2023-01-17 23:37:19 sh: locale: not found
-2023-01-17 23:37:19 2023-01-17 20:37:19.923 UTC [31] WARNING:  no usable system locales were found
-2023-01-17 23:37:27 initdb: warning: enabling "trust" authentication for local connections
-2023-01-17 23:37:27 You can change this by editing pg_hba.conf or using the option -A, or
-2023-01-17 23:37:27 --auth-local and --auth-host, the next time you run initdb.
-2023-01-17 23:37:30 2023-01-17 20:37:30.127 UTC [1] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
-2023-01-17 23:37:30 2023-01-17 20:37:30.127 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2023-01-17 23:37:30 2023-01-17 20:37:30.127 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2023-01-17 23:37:30 2023-01-17 20:37:30.133 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-01-17 23:37:30 2023-01-17 20:37:30.162 UTC [51] LOG:  database system was shut down at 2023-01-17 20:37:30 UTC
-2023-01-17 23:37:30 2023-01-17 20:37:30.193 UTC [1] LOG:  database system is ready to accept connections
-2023-01-17 23:37:37 2023-01-17 20:37:37.074 UTC [1] LOG:  received fast shutdown request
-2023-01-17 23:37:37 2023-01-17 20:37:37.079 UTC [1] LOG:  aborting any active transactions
-2023-01-17 23:37:37 2023-01-17 20:37:37.080 UTC [1] LOG:  background worker "logical replication launcher" (PID 57) exited with exit code 1
-2023-01-17 23:37:37 2023-01-17 20:37:37.081 UTC [52] LOG:  shutting down
-2023-01-17 23:37:37 2023-01-17 20:37:37.176 UTC [1] LOG:  database system is shut down
-2023-01-17 23:38:17 2023-01-17 20:38:17.204 UTC [1] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
-2023-01-17 23:38:17 2023-01-17 20:38:17.204 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2023-01-17 23:38:17 2023-01-17 20:38:17.204 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2023-01-17 23:38:17 2023-01-17 20:38:17.216 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-01-17 23:38:17 2023-01-17 20:38:17.245 UTC [22] LOG:  database system was shut down at 2023-01-17 20:37:37 UTC
-2023-01-17 23:38:17 2023-01-17 20:38:17.276 UTC [1] LOG:  database system is ready to accept connections
-2023-01-17 23:38:39 2023-01-17 20:38:39.851 UTC [29] ERROR:  schema "stock_management" does not exist at character 14
-2023-01-17 23:38:39 2023-01-17 20:38:39.851 UTC [29] STATEMENT:  create table stock_management.product (product_id  bigserial not null, is_deleted boolean, price float8, product_created_date timestamp, product_name varchar(255), product_updated_date timestamp, quantity int4, primary key (product_id))
-2023-01-17 23:39:19 2023-01-17 20:39:19.995 UTC [29] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:39:19 2023-01-17 20:39:19.995 UTC [29] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.is_deleted=false
-2023-01-17 23:39:39 2023-01-17 20:39:39.402 UTC [29] ERROR:  relation "stock_management.product" does not exist at character 13
-2023-01-17 23:39:39 2023-01-17 20:39:39.402 UTC [29] STATEMENT:  insert into stock_management.product (is_deleted, price, product_created_date, product_name, product_updated_date, quantity) values ($1, $2, $3, $4, $5, $6)
-2023-01-17 23:39:39 RETURNING *
-2023-01-17 23:40:36 2023-01-17 20:40:36.909 UTC [29] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:40:36 2023-01-17 20:40:36.909 UTC [29] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:40:38 2023-01-17 20:40:38.941 UTC [29] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:40:38 2023-01-17 20:40:38.941 UTC [29] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:41:43 2023-01-17 20:41:43.879 UTC [29] ERROR:  relation "stock_management.product" does not exist at character 13
-2023-01-17 23:41:43 2023-01-17 20:41:43.879 UTC [29] STATEMENT:  insert into stock_management.product (is_deleted, price, product_created_date, product_name, product_updated_date, quantity) values ($1, $2, $3, $4, $5, $6)
-2023-01-17 23:41:43 RETURNING *
-2023-01-17 23:50:02 2023-01-17 20:50:02.331 UTC [1] LOG:  received fast shutdown request
-2023-01-17 23:50:02 2023-01-17 20:50:02.336 UTC [1] LOG:  aborting any active transactions
-2023-01-17 23:50:02 2023-01-17 20:50:02.336 UTC [38] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.337 UTC [37] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.337 UTC [35] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.338 UTC [36] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.338 UTC [33] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.339 UTC [34] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.340 UTC [31] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.340 UTC [32] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.340 UTC [30] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.340 UTC [29] FATAL:  terminating connection due to administrator command
-2023-01-17 23:50:02 2023-01-17 20:50:02.342 UTC [1] LOG:  background worker "logical replication launcher" (PID 28) exited with exit code 1
-2023-01-17 23:50:02 2023-01-17 20:50:02.382 UTC [23] LOG:  shutting down
-2023-01-17 23:50:02 2023-01-17 20:50:02.484 UTC [1] LOG:  database system is shut down
-2023-01-17 23:52:52 2023-01-17 20:52:52.670 UTC [1] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
-2023-01-17 23:52:52 2023-01-17 20:52:52.670 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2023-01-17 23:52:52 2023-01-17 20:52:52.670 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2023-01-17 23:52:52 2023-01-17 20:52:52.678 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-01-17 23:52:52 2023-01-17 20:52:52.709 UTC [21] LOG:  database system was shut down at 2023-01-17 20:50:02 UTC
-2023-01-17 23:52:52 2023-01-17 20:52:52.739 UTC [1] LOG:  database system is ready to accept connections
-2023-01-17 23:53:14 2023-01-17 20:53:14.416 UTC [28] ERROR:  schema "stock_management" does not exist at character 14
-2023-01-17 23:53:14 2023-01-17 20:53:14.416 UTC [28] STATEMENT:  create table stock_management.product (product_id  bigserial not null, is_deleted boolean, price float8, product_created_date timestamp, product_name varchar(255), product_updated_date timestamp, quantity int4, primary key (product_id))
-2023-01-17 23:54:43 2023-01-17 20:54:43.998 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 13
-2023-01-17 23:54:43 2023-01-17 20:54:43.998 UTC [28] STATEMENT:  insert into stock_management.product (is_deleted, price, product_created_date, product_name, product_updated_date, quantity) values ($1, $2, $3, $4, $5, $6)
-2023-01-17 23:54:43 RETURNING *
-2023-01-17 23:54:58 2023-01-17 20:54:58.678 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:54:58 2023-01-17 20:54:58.678 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:55:00 2023-01-17 20:55:00.491 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:55:00 2023-01-17 20:55:00.491 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:55:11 2023-01-17 20:55:11.880 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:55:11 2023-01-17 20:55:11.880 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:55:13 2023-01-17 20:55:13.389 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:55:13 2023-01-17 20:55:13.389 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
-2023-01-17 23:55:19 2023-01-17 20:55:19.970 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:55:19 2023-01-17 20:55:19.970 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.is_deleted=false
-2023-01-17 23:56:10 2023-01-17 20:56:10.425 UTC [28] ERROR:  relation "stock_management.product" does not exist at character 290
-2023-01-17 23:56:10 2023-01-17 20:56:10.425 UTC [28] STATEMENT:  select product0_.product_id as product_1_0_, product0_.is_deleted as is_delet2_0_, product0_.price as price3_0_, product0_.product_created_date as product_4_0_, product0_.product_name as product_5_0_, product0_.product_updated_date as product_6_0_, product0_.quantity as quantity7_0_ from stock_management.product product0_ where product0_.product_id=$1 and product0_.is_deleted=false
+2023-01-19 19:15:42 The files belonging to this database system will be owned by user "postgres".
+2023-01-19 19:15:42 This user must also own the server process.
+2023-01-19 19:15:42 
+2023-01-19 19:15:42 The database cluster will be initialized with locale "en_US.utf8".
+2023-01-19 19:15:42 The default database encoding has accordingly been set to "UTF8".
+2023-01-19 19:15:42 The default text search configuration will be set to "english".
+2023-01-19 19:15:42 
+2023-01-19 19:15:42 Data page checksums are disabled.
+2023-01-19 19:15:42 
+2023-01-19 19:15:42 fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2023-01-19 19:15:42 creating subdirectories ... ok
+2023-01-19 19:15:42 selecting dynamic shared memory implementation ... posix
+2023-01-19 19:15:42 selecting default max_connections ... 100
+2023-01-19 19:15:42 selecting default shared_buffers ... 128MB
+2023-01-19 19:15:42 selecting default time zone ... UTC
+2023-01-19 19:15:42 creating configuration files ... ok
+2023-01-19 19:15:47 running bootstrap script ... ok
+2023-01-19 19:15:54 performing post-bootstrap initialization ... ok
+2023-01-19 19:15:59 syncing data to disk ... ok
+2023-01-19 19:15:59 
+2023-01-19 19:15:59 
+2023-01-19 19:15:59 Success. You can now start the database server using:
+2023-01-19 19:15:59 
+2023-01-19 19:15:59     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2023-01-19 19:15:59 
+2023-01-19 19:15:59 waiting for server to start....2023-01-19 16:15:59.648 UTC [37] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
+2023-01-19 19:15:59 2023-01-19 16:15:59.651 UTC [37] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-01-19 19:15:59 2023-01-19 16:15:59.694 UTC [38] LOG:  database system was shut down at 2023-01-19 16:15:54 UTC
+2023-01-19 19:15:59 2023-01-19 16:15:59.739 UTC [37] LOG:  database system is ready to accept connections
+2023-01-19 19:15:59  done
+2023-01-19 19:15:59 server started
+2023-01-19 19:16:02 CREATE DATABASE
+2023-01-19 19:16:02 
+2023-01-19 19:16:02 
+2023-01-19 19:16:02 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2023-01-19 19:16:02 
+2023-01-19 19:16:02 waiting for server to shut down...2023-01-19 16:16:02.888 UTC [37] LOG:  received fast shutdown request
+2023-01-19 19:16:02 .2023-01-19 16:16:02.893 UTC [37] LOG:  aborting any active transactions
+2023-01-19 19:16:02 2023-01-19 16:16:02.894 UTC [37] LOG:  background worker "logical replication launcher" (PID 44) exited with exit code 1
+2023-01-19 19:16:02 2023-01-19 16:16:02.894 UTC [39] LOG:  shutting down
+2023-01-19 19:16:02 2023-01-19 16:16:02.993 UTC [37] LOG:  database system is shut down
+2023-01-19 19:16:02  done
+2023-01-19 19:16:02 server stopped
+2023-01-19 19:16:02 
+2023-01-19 19:16:02 PostgreSQL init process complete; ready for start up.
+2023-01-19 19:16:02 
+2023-01-19 19:15:48 sh: locale: not found
+2023-01-19 19:15:48 2023-01-19 16:15:48.438 UTC [31] WARNING:  no usable system locales were found
+2023-01-19 19:15:59 initdb: warning: enabling "trust" authentication for local connections
+2023-01-19 19:15:59 You can change this by editing pg_hba.conf or using the option -A, or
+2023-01-19 19:15:59 --auth-local and --auth-host, the next time you run initdb.
+2023-01-19 19:16:03 2023-01-19 16:16:03.037 UTC [1] LOG:  starting PostgreSQL 13.6 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit
+2023-01-19 19:16:03 2023-01-19 16:16:03.037 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-01-19 19:16:03 2023-01-19 16:16:03.037 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-01-19 19:16:03 2023-01-19 16:16:03.043 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-01-19 19:16:03 2023-01-19 16:16:03.080 UTC [51] LOG:  database system was shut down at 2023-01-19 16:16:02 UTC
+2023-01-19 19:16:03 2023-01-19 16:16:03.133 UTC [1] LOG:  database system is ready to accept connections
+2023-01-19 19:16:37 2023-01-19 16:16:37.588 UTC [58] ERROR:  schema "stock_management" does not exist at character 14
+2023-01-19 19:16:37 2023-01-19 16:16:37.588 UTC [58] STATEMENT:  create table stock_management.product (product_id  bigserial not null, is_deleted boolean, price float8, product_created_date timestamp, product_name varchar(255), product_updated_date timestamp, quantity int4, primary key (product_id))
+2023-01-19 19:18:43 2023-01-19 16:18:43.765 UTC [58] ERROR:  relation "stock_management.product" does not exist at character 13
+2023-01-19 19:18:43 2023-01-19 16:18:43.765 UTC [58] STATEMENT:  insert into stock_management.product (is_deleted, price, product_created_date, product_name, product_updated_date, quantity) values ($1, $2, $3, $4, $5, $6)
+2023-01-19 19:18:43 RETURNING *
+2023-01-19 19:20:43 2023-01-19 16:20:43.684 UTC [81] ERROR:  database "stock_management" already exists
+2023-01-19 19:20:43 2023-01-19 16:20:43.684 UTC [81] STATEMENT:  create database stock_management;
